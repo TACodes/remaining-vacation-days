@@ -1,0 +1,23 @@
+{
+  "name": "Remaining Vacation Days",
+  "version": "0.1.0",
+  "description": "Shows remaining vacation days for employee",
+  "permissions": ["tabs"],
+  "host_permissions": ["https://*.projectworksapp.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://*.projectworksapp.com/Person/Leave/*"],
+      "js": ["contentScript.js"]
+    }
+  ],
+
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/year.png"
+      ],
+      "matches": ["https://*.projectworksapp.com/*"]
+    }
+  ],
+  "manifest_version": 3
+}
